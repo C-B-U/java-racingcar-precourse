@@ -1,8 +1,16 @@
 package racingcar.view;
 
+import racingcar.domain.Car;
 import racingcar.domain.message.ProcessMessage;
 
 public class OutputView {
+    private static final String COLON = ": ";
+    private static final String MOVING = "-";
+
+    public void printNewLine() {
+        System.out.println();
+    }
+
     public void printInputCarNames() {
         System.out.println(ProcessMessage.INPUT_CAR_NAMES);
     }
@@ -12,6 +20,20 @@ public class OutputView {
     }
 
     public void printInputNumberOfAttempts() {
+        printNewLine();
         System.out.println(ProcessMessage.INPUT_NUM_ATTEMPTS);
+    }
+
+    public void printProcessResultMessage() {
+        printNewLine();
+        System.out.println(ProcessMessage.PROCESS_RESULT);
+    }
+
+    public void printRacingRecord(Car car) {
+        System.out.print(car.getName() + COLON);
+        for (int i = 0; i < car.getPosition(); i++) {
+            System.out.print(MOVING);
+        }
+        printNewLine();
     }
 }
