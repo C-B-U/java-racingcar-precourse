@@ -1,12 +1,11 @@
 package racingcar.controller;
 
 import racingcar.domain.Car;
-import racingcar.domain.RandomNumberGenerator;
+import racingcar.domain.generator.RandomNumberGenerator;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
 import java.util.List;
-import java.util.stream.IntStream;
 
 public class RacingController {
     private final OutputView outputView = new OutputView();
