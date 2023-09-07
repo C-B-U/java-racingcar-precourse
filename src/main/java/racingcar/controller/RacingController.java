@@ -1,7 +1,10 @@
 package racingcar.controller;
 
+import racingcar.domain.Car;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
+
+import java.util.List;
 
 public class RacingController {
     private final OutputView outputView = new OutputView();
@@ -9,6 +12,8 @@ public class RacingController {
 
     public void start() {
         outputView.printInputCarNames();
-        inputView.inputCarNames();
+        List<Car> cars = inputView.inputCarNames();
+        outputView.printInputNumberOfAttempts();
+        int attempts = inputView.inputNumberOfAttempts();
     }
 }
