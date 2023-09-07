@@ -2,6 +2,7 @@ package racingcar.domain;
 
 import racingcar.domain.message.ErrorMessage;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,6 +10,13 @@ import java.util.stream.Collectors;
 public class Cars {
     private static final String BLANK = " ";
     private static final String COMMA = ",";
+
+    private List<Car> cars = new ArrayList<>();
+
+    public Cars(String names) {
+        validateNames(names);
+        this.cars = convert(names);
+    }
 
     public List<Car> convert(String names) {
         validateNames(names);
@@ -32,5 +40,9 @@ public class Cars {
         if (names.contains(BLANK)) {
             throw new IllegalArgumentException(ErrorMessage.HAS_BLANK.toString());
         }
+    }
+
+    public List<Car> getCars() {
+        return new ArrayList<>(cars);
     }
 }
