@@ -31,6 +31,6 @@ class CarTest {
         Car car = new Car("일이삼사");
         car.move(1);
         car.move(2);
-        assertThat(car.getPosition()).isEqualTo(0);
+        assertThat(car.getPosition()).isZero();
     }
 }
