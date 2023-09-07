@@ -11,7 +11,7 @@ public class Cars {
     private static final String BLANK = " ";
     private static final String COMMA = ",";
 
-    private List<Car> cars = new ArrayList<>();
+    private final List<Car> cars;
 
     public Cars(String names) {
         validateNames(names);
