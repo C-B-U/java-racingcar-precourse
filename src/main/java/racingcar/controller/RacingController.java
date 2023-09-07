@@ -1,6 +1,7 @@
 package racingcar.controller;
 
 import racingcar.domain.Car;
+import racingcar.domain.WinningCar;
 import racingcar.domain.generator.RandomNumberGenerator;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
@@ -26,6 +27,7 @@ public class RacingController {
             processRacing(cars);
             outputView.printNewLine();
         }
+        showWinner(cars);
     }
 
     private void processRacing(List<Car> cars) {
@@ -33,5 +35,11 @@ public class RacingController {
             car.move(randomNumberGenerator.generate());
             outputView.printRacingRecord(car);
         });
+    }
+
+    private void showWinner(List<Car> cars) {
+        outputView.printWinnerMessage();
+        outputView.printWinner(new WinningCar(cars).getWinningCar());
+
     }
 }

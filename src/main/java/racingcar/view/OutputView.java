@@ -1,10 +1,15 @@
 package racingcar.view;
 
 import racingcar.domain.Car;
+import racingcar.domain.WinningCar;
 import racingcar.domain.message.ProcessMessage;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class OutputView {
-    private static final String COLON = ": ";
+    private static final String COLON = " : ";
+    private static final String COMMA = ", ";
     private static final String MOVING = "-";
 
     public void printNewLine() {
@@ -35,5 +40,13 @@ public class OutputView {
             System.out.print(MOVING);
         }
         printNewLine();
+    }
+
+    public void printWinnerMessage() {
+        System.out.print(ProcessMessage.WINNER_MESSAGE + COLON);
+    }
+
+    public void printWinner(List<Car> cars) {
+        System.out.println(cars.stream().map(Car::getName).collect(Collectors.joining(COMMA)));
     }
 }
