@@ -2,6 +2,7 @@ package racingcar.domain;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import racingcar.domain.message.ErrorMessage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -12,7 +13,7 @@ class CarTest {
     void carNameTest1() {
         String name = "일이삼사오육";
         IllegalArgumentException e = assertThrows(IllegalArgumentException.class, () -> new Car(name));
-        assertThat(e.getMessage()).isEqualTo("[ERROR] 자동차 이름은 5자 이하만 가능합니다.");
+        assertThat(e.getMessage()).isEqualTo(ErrorMessage.OVER_MAXIMUM_LENGTH);
     }
 
     @Test

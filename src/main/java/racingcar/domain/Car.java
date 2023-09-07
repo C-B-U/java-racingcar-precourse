@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.domain.message.ErrorMessage;
+
 public class Car {
     private static final int MAXIMUM_NAME_LENGTH = 5;
     private static final int POSSIBLE_MOVE_NUMBER = 4;
@@ -21,7 +23,7 @@ public class Car {
 
     private void validateName(String name) {
         if (name.length() > MAXIMUM_NAME_LENGTH) {
-            throw new IllegalArgumentException("[ERROR] 자동차 이름은 5자 이하만 가능합니다.");
+            throw new IllegalArgumentException(ErrorMessage.OVER_MAXIMUM_LENGTH.toString());
         }
     }
 
