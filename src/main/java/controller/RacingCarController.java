@@ -9,10 +9,20 @@ import java.util.List;
 public class RacingCarController {
 
     OutputView outputView = new OutputView();
-    InputView interView = new InputView();
+    InputView inputView = new InputView();
 
     public void start() {
+        List<Name> names = readNames();
+        int tryCount = readTryCount();
+    }
+
+    private List<Name> readNames() {
         outputView.printCarNames();
-        List<Name> names = interView.readNames();
+        return inputView.readNames();
+    }
+
+    private int readTryCount() {
+        outputView.printTryCount();
+        return inputView.readTryCount();
     }
 }
