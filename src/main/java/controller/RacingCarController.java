@@ -15,7 +15,7 @@ public class RacingCarController {
 
     public void start() {
         carService.addCars(readNames());
-        int tryCount = readTryCount();
+        carService.race(readTryCount());
     }
 
     private List<Name> readNames() {

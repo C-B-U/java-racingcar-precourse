@@ -12,4 +12,10 @@ public class CarService {
     public void addCars(List<Name> names) {
         cars = new Cars(names);
     }
+
+    public void race(int tryCount) {
+        for (int i = 0; i < tryCount; i++) {
+            cars.race();
+        }
+    }
 }
