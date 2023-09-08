@@ -8,4 +8,8 @@ public class OutputView {
     public void printInputCarNames(){
         System.out.println(ProgressMessage.INPUT_CAR_NAMES);
     }
+
+    public void printInputTryCount(){
+        System.out.println(ProgressMessage.INPUT_TRY_COUNT);
+    }
 }
