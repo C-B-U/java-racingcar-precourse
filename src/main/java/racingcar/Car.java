@@ -29,4 +29,12 @@ public class Car {
         stringBuilder.append("\n");
         return stringBuilder;
     }
+
+    public int getPosition() {
+        return position;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
