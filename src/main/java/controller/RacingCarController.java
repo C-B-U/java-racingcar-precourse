@@ -1,6 +1,7 @@
 package controller;
 
 import racingcar.domain.Name;
+import racingcar.service.CarService;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -8,11 +9,12 @@ import java.util.List;
 
 public class RacingCarController {
 
-    OutputView outputView = new OutputView();
-    InputView inputView = new InputView();
+    private final OutputView outputView = new OutputView();
+    private final InputView inputView = new InputView();
+    private final CarService carService = new CarService();
 
     public void start() {
-        List<Name> names = readNames();
+        carService.addCars(readNames());
         int tryCount = readTryCount();
     }
 
