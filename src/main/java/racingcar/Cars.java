@@ -7,7 +7,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class Cars {
+
+    private static final int OVER_ONE_WINNER = 1;
+    private static final int ONLY_ONE_WINNER = 0;
+    private static final int DEFAULT_POSITION = 0;
     private static final String DIVISION = ",";
+    private static final String WINNER_DELIMITER = ", ";
     private final List<Car> cars = new ArrayList<>();
 
     public void addCars(String name){
@@ -33,10 +38,10 @@ public class Cars {
     public String finalWinner(){
         List<String> winCars = getWinCarNames();
 
-        if (winCars.size() > 1) {
-            return String.join(", ", winCars);
+        if (winCars.size() > OVER_ONE_WINNER) {
+            return String.join(WINNER_DELIMITER, winCars);
         }
-        return winCars.get(0);
+        return winCars.get(ONLY_ONE_WINNER);
     }
 
     private List<String> getWinCarNames() {
@@ -50,7 +55,7 @@ public class Cars {
         return cars.stream()
                 .mapToInt(Car::getPosition)
                 .max()
-                .orElse(0);
+                .orElse(DEFAULT_POSITION);
     }
 
 }

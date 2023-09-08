@@ -9,6 +9,7 @@ public class InputValidator {
     private static final int MIN_TRY_COUNT = 1;
     private static final int MIN_NAME_SIZE = 2;
     private static final String DIVISION = ",";
+    private static final String NUMERIC_REGEX = "^\\d*$";
 
     public void validateContainDivision(String name) {
         Set<String> carNames = Arrays.stream(name.split(DIVISION)).collect(Collectors.toSet());
@@ -25,7 +26,7 @@ public class InputValidator {
     }
 
     private void validateNumeric(String count){
-        if (!count.matches("^\\d*$")){
+        if (!count.matches(NUMERIC_REGEX)){
             throw new IllegalArgumentException(ErrorMessage.INPUT_NUMERIC_ERROR.getMessage());
         }
     }
