@@ -1,5 +1,6 @@
 package controller;
 
+import racingcar.domain.Name;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
 
@@ -12,6 +13,6 @@ public class RacingCarController {
 
     public void start() {
         outputView.printCarNames();
-        List<String> names = interView.readNames();
+        List<Name> names = interView.readNames();
     }
 }
