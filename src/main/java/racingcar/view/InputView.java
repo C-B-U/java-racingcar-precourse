@@ -17,4 +17,8 @@ public class InputView {
                 .map(Name::new)
                 .collect(Collectors.toList());
     }
+
+    public int readTryCount() {
+        return Integer.parseInt(Console.readLine());
+    }
 }
