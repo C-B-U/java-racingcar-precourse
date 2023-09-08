@@ -15,7 +15,19 @@ public class Car {
         position.move();
     }
 
+    public boolean isWinner(int maxPosition) {
+        return position.isSame(maxPosition);
+    }
+
     public String getRacingResult() {
         return String.format(OutputMessage.RACING_RESULT.toString(), name.getValue(), position.getValue());
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public Name getName() {
+        return name;
     }
 }
