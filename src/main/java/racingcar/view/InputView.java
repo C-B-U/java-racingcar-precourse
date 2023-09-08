@@ -23,6 +23,8 @@ public class InputView {
     }
 
     public int readTryCount() {
-        return Integer.parseInt(Console.readLine());
+        String input = Console.readLine();
+        inputValidator.validateIsNumber(input);
+        return Integer.parseInt(input);
     }
 }
