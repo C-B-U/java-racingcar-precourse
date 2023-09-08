@@ -1,11 +1,9 @@
 package racingcar.controller;
 
-import racingcar.domain.Name;
+import racingcar.domain.Names;
 import racingcar.service.CarService;
 import racingcar.view.InputView;
 import racingcar.view.OutputView;
-
-import java.util.List;
 
 public class RacingCarController {
 
@@ -23,7 +21,7 @@ public class RacingCarController {
         outputView.printWinner(carService.getWinner());
     }
 
-    private List<Name> readNames() {
+    private Names readNames() {
         outputView.printCarNames();
         return inputView.readNames();
     }

@@ -1,10 +1,7 @@
 package racingcar.view;
 
 import racingcar.constant.OutputMessage;
-import racingcar.domain.Name;
-
-import java.util.List;
-import java.util.StringJoiner;
+import racingcar.domain.Names;
 
 public class OutputView {
 
@@ -24,9 +21,7 @@ public class OutputView {
         System.out.println(result);
     }
 
-    public void printWinner(List<Name> names) {
-        StringJoiner stringJoiner = new StringJoiner(", ");
-        names.forEach(name -> stringJoiner.add(name.getValue()));
-        System.out.println(OutputMessage.WINNER + stringJoiner.toString());
+    public void printWinner(Names names) {
+        System.out.println(OutputMessage.WINNER + names.getElements());
     }
 }

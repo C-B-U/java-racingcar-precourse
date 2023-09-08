@@ -2,6 +2,7 @@ package racingcar.view;
 
 import camp.nextstep.edu.missionutils.Console;
 import racingcar.domain.Name;
+import racingcar.domain.Names;
 import racingcar.validator.InputValidator;
 
 import java.util.Arrays;
@@ -15,13 +16,14 @@ public class InputView {
 
     private final InputValidator inputValidator = new InputValidator();
 
-    public List<Name> readNames() {
+    public Names readNames() {
         return attemptedInput(() -> {
-            String names = Console.readLine();
-            inputValidator.validateDelimiter(names);
-            return Arrays.stream(names.split(NAMES_REGEX))
+            String input = Console.readLine();
+            inputValidator.validateDelimiter(input);
+            List<Name> names = Arrays.stream(input.split(NAMES_REGEX))
                     .map(Name::new)
                     .collect(Collectors.toList());
+            return new Names(names);
         });
     }
 

@@ -1,15 +1,13 @@
 package racingcar.service;
 
 import racingcar.domain.Cars;
-import racingcar.domain.Name;
-
-import java.util.List;
+import racingcar.domain.Names;
 
 public class CarService {
 
     private Cars cars;
 
-    public void addCars(List<Name> names) {
+    public void addCars(Names names) {
         cars = new Cars(names);
     }
 
@@ -18,7 +16,7 @@ public class CarService {
         return cars.getRacingResult();
     }
 
-    public List<Name> getWinner() {
+    public Names getWinner() {
         return cars.getWinner();
     }
 }

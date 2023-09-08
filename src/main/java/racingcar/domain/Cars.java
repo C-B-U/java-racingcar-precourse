@@ -9,8 +9,9 @@ public class Cars {
 
     private final List<Car> cars = new ArrayList<>();
 
-    public Cars(List<Name> names) {
-        names.forEach(name -> cars.add(new Car(name)));
+    public Cars(Names names) {
+        names.getNames()
+                .forEach(name -> cars.add(new Car(name)));
     }
 
     public void race() {
@@ -26,12 +27,13 @@ public class Cars {
         return stringBuilder.toString();
     }
 
-    public List<Name> getWinner() {
+    public Names getWinner() {
         int maxPosition = calculateMaxPosition();
-        return cars.stream()
+        List<Name> winner = cars.stream()
                 .filter(car -> car.isWinner(maxPosition))
                 .map(Car::getName)
                 .collect(Collectors.toList());
+        return new Names(winner);
     }
 
     public int calculateMaxPosition() {
