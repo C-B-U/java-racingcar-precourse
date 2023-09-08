@@ -20,4 +20,13 @@ public class Car {
     public void movePosition(){
         position++;
     }
+
+    public StringBuilder makeScreen(StringBuilder stringBuilder) {
+        stringBuilder.append(name).append(" : ");
+        for (int i = 0; i < position; i++){
+            stringBuilder.append("-");
+        }
+        stringBuilder.append("\n");
+        return stringBuilder;
+    }
 }
