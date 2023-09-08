@@ -18,6 +18,7 @@ public class RacingCarController {
 
         outputView.printExecuteResult();
         changeCarsStatus(cars, tryCount);
+        outputView.printFinalWinner(cars);
     }
 
     private void changeCarsStatus(Cars cars, int tryCount) {
