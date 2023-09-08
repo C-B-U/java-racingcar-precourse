@@ -1,4 +1,7 @@
-package racingcar;
+package racingcar.view;
+
+import racingcar.constants.ProgressMessage;
+import racingcar.domain.Cars;
 
 public class OutputView {
     public void printErrorMessage(String message) {

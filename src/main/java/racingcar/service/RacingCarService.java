@@ -1,4 +1,6 @@
-package racingcar;
+package racingcar.service;
+
+import racingcar.domain.Cars;
 
 public class RacingCarService {
 

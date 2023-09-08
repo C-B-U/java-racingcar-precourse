@@ -1,7 +1,8 @@
-package racingcar;
+package racingcar.view;
 
 import java.util.function.Supplier;
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.domain.Cars;
 
 public class InputView {
 

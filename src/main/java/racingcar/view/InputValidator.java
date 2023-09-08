@@ -1,4 +1,6 @@
-package racingcar;
+package racingcar.view;
+
+import racingcar.constants.ErrorMessage;
 
 import java.util.Arrays;
 import java.util.Set;
