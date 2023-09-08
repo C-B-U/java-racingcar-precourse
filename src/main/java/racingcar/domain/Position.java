@@ -5,6 +5,7 @@ import racingcar.constant.RandomNumber;
 
 public class Position {
 
+    private static final String RACING_LINE = "-";
     private int value = 0;
 
     public void move() {
@@ -21,5 +22,13 @@ public class Position {
         int start = RandomNumber.START_RANGE.getValue();
         int end = RandomNumber.END_RANGE.getValue();
         return Randoms.pickNumberInRange(start, end);
+    }
+
+    public String getValue() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < value; i++) {
+            stringBuilder.append(RACING_LINE);
+        }
+        return stringBuilder.toString();
     }
 }
