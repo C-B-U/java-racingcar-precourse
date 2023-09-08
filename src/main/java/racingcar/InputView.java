@@ -20,6 +20,15 @@ public class InputView {
         });
     }
 
+    public int readTryCount(){
+        return read(() ->{
+            outputView.printInputTryCount();
+            int count = scan.nextInt();
+            inputValidator.validateTryCount(count);
+            return count;
+        });
+    }
+
     private <T> T read(Supplier<T> supplier){
         while (true){
             try{
