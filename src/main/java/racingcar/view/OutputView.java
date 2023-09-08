@@ -24,4 +24,8 @@ public class OutputView {
     public void printWinner(Names names) {
         System.out.println(OutputMessage.WINNER + names.getElements());
     }
+
+    public void printNewLine() {
+        System.out.println();
+    }
 }

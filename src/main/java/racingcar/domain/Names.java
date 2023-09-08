@@ -16,7 +16,7 @@ public class Names {
     }
 
     public String getElements() {
-        StringJoiner stringJoiner = new StringJoiner(PrintElement.SEPERATOR.getElement());
+        StringJoiner stringJoiner = new StringJoiner(PrintElement.SEPARATOR.getElement());
         element.forEach(name -> stringJoiner.add(name.getValue()));
         return stringJoiner.toString();
     }

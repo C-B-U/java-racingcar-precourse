@@ -24,7 +24,7 @@ public class Cars {
         StringBuilder stringBuilder = new StringBuilder();
         cars.forEach(car ->
                 stringBuilder.append(car.getRacingResult())
-                        .append(PrintElement.NEW_LINE)
+                        .append(PrintElement.NEW_LINE.getElement())
         );
         return stringBuilder.toString();
     }

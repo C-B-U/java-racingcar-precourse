@@ -23,11 +23,15 @@ public class RacingCarController {
 
     private Names readNames() {
         outputView.printCarNames();
-        return inputView.readNames();
+        Names names = inputView.readNames();
+        outputView.printNewLine();
+        return names;
     }
 
     private int readTryCount() {
         outputView.printTryCount();
-        return inputView.readTryCount();
+        int tryCount = inputView.readTryCount();
+        outputView.printNewLine();
+        return tryCount;
     }
 }

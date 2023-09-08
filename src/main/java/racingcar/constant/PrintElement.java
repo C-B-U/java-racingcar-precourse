@@ -3,7 +3,7 @@ package racingcar.constant;
 public enum PrintElement {
 
     NEW_LINE("\n"),
-    SEPERATOR(", ");
+    SEPARATOR(", ");
 
     private final String element;
 
