@@ -15,7 +15,7 @@ public class Position {
     }
 
     private boolean canMove() {
-        return pickRandomNumber() > RandomNumber.CAN_MOVE_NUMBER.getValue();
+        return pickRandomNumber() >= RandomNumber.CAN_MOVE_NUMBER.getValue();
     }
 
     private int pickRandomNumber() {
