@@ -12,4 +12,10 @@ public class OutputView {
     public void printInputTryCount(){
         System.out.println(ProgressMessage.INPUT_TRY_COUNT);
     }
+
+    public void printExecuteResult(){
+        System.out.println(ProgressMessage.EXECUTE_RESULT);
+    }
+
+
 }
