@@ -15,7 +15,11 @@ public class RacingCarController {
 
     public void start() {
         carService.addCars(readNames());
-        carService.race(readTryCount());
+        int tryCount = readTryCount();
+        outputView.printResultMessage();
+        for (int i = 0; i < tryCount; i++) {
+            outputView.printRacingResult(carService.race());
+        }
     }
 
     private List<Name> readNames() {

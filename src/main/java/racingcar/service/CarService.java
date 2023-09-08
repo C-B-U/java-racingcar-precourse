@@ -13,9 +13,8 @@ public class CarService {
         cars = new Cars(names);
     }
 
-    public void race(int tryCount) {
-        for (int i = 0; i < tryCount; i++) {
-            cars.race();
-        }
+    public String race() {
+        cars.race();
+        return cars.getRacingResult();
     }
 }

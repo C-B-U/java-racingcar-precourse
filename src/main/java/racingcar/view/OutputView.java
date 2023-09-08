@@ -11,4 +11,12 @@ public class OutputView {
     public void printTryCount() {
         System.out.println(OutputMessage.READ_TRY_COUNT);
     }
+
+    public void printResultMessage() {
+        System.out.println(OutputMessage.RESULT_MESSAGE);
+    }
+
+    public void printRacingResult(String result) {
+        System.out.println(result);
+    }
 }
