@@ -24,6 +24,14 @@ public class Position {
         return Randoms.pickNumberInRange(start, end);
     }
 
+    public boolean isSame(int maxPosition) {
+        return value == maxPosition;
+    }
+
+    public int getPosition() {
+        return value;
+    }
+
     public String getValue() {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < value; i++) {

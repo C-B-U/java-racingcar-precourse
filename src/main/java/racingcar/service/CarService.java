@@ -17,4 +17,8 @@ public class CarService {
         cars.race();
         return cars.getRacingResult();
     }
+
+    public List<Name> getWinner() {
+        return cars.getWinner();
+    }
 }

@@ -1,4 +1,4 @@
-package controller;
+package racingcar.controller;
 
 import racingcar.domain.Name;
 import racingcar.service.CarService;
@@ -20,6 +20,7 @@ public class RacingCarController {
         for (int i = 0; i < tryCount; i++) {
             outputView.printRacingResult(carService.race());
         }
+        outputView.printWinner(carService.getWinner());
     }
 
     private List<Name> readNames() {
