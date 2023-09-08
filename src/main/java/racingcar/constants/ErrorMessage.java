@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.constants;
 
 public enum ErrorMessage {
     NAME_DIVISION_ERROR("이름은 쉼표(,) 기준으로 구분합니다."),
