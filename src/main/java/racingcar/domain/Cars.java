@@ -38,7 +38,7 @@ public class Cars {
         return new Names(winner);
     }
 
-    public int calculateMaxPosition() {
+    private int calculateMaxPosition() {
         List<Integer> positions = cars.stream()
                 .map(Car::getPosition)
                 .mapToInt(Position::getPosition)
