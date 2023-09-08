@@ -16,4 +16,8 @@ public class Car {
             throw new IllegalArgumentException(ErrorMessage.NAME_LENGTH_ERROR.getMessage());
         }
     }
+
+    public void movePosition(){
+        position++;
+    }
 }
