@@ -28,7 +28,29 @@ public class Cars {
                 .map(car -> car.makeScreen(new StringBuilder()))
                 .reduce(new StringBuilder(), StringBuilder::append)
                 .toString();
+    }
 
+    public String finalWinner(){
+        List<String> winCars = getWinCarNames();
+
+        if (winCars.size() > 1) {
+            return String.join(", ", winCars);
+        }
+        return winCars.get(0);
+    }
+
+    private List<String> getWinCarNames() {
+        return cars.stream()
+                .filter(car -> car.getPosition() == maxPosition())
+                .map(Car::getName)
+                .collect(Collectors.toList());
+    }
+
+    private int maxPosition(){
+        return cars.stream()
+                .mapToInt(Car::getPosition)
+                .max()
+                .orElse(0);
     }
 
 }
