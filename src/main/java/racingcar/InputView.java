@@ -24,6 +24,7 @@ public class InputView {
         return read(() ->{
             outputView.printInputTryCount();
             int count = scan.nextInt();
+            outputView.printEnter();
             inputValidator.validateTryCount(count);
             return count;
         });

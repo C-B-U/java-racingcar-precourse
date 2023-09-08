@@ -22,7 +22,11 @@ public class OutputView {
     }
 
     public void printFinalWinner(Cars cars){
-        System.out.println(ProgressMessage.FINAL_WINNER);
+        System.out.print(ProgressMessage.FINAL_WINNER);
         System.out.println(cars.finalWinner());
+    }
+
+    public void printEnter(){
+        System.out.println();
     }
 }
