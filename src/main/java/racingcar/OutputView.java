@@ -20,4 +20,9 @@ public class OutputView {
     public void printCarsStatus(Cars cars){
         System.out.println(cars.executionResult());
     }
+
+    public void printFinalWinner(Cars cars){
+        System.out.println(ProgressMessage.FINAL_WINNER);
+        System.out.println(cars.finalWinner());
+    }
 }
