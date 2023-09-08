@@ -17,5 +17,7 @@ public class OutputView {
         System.out.println(ProgressMessage.EXECUTE_RESULT);
     }
 
-
+    public void printCarsStatus(Cars cars){
+        System.out.println(cars.executionResult());
+    }
 }
