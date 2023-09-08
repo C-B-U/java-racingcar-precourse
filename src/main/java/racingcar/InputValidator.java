@@ -1,0 +1,19 @@
+package racingcar;
+
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class InputValidator {
+
+    private static final int MIN_NAME_SIZE = 2;
+    private static final String DIVISION = ",";
+
+    public void validateContainDivision(String name) {
+        Set<String> carNames = Arrays.stream(name.split(DIVISION)).collect(Collectors.toSet());
+        if(carNames.size() < MIN_NAME_SIZE){
+            throw new IllegalArgumentException(ErrorMessage.NAME_DIVISION_ERROR.getMessage());
+        }
+    }
+
+}
