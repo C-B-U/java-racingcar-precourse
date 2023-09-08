@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 public class InputValidator {
 
+    private static final int MIN_TRY_COUNT = 1;
     private static final int MIN_NAME_SIZE = 2;
     private static final String DIVISION = ",";
 
@@ -16,4 +17,9 @@ public class InputValidator {
         }
     }
 
+    public void validateTryCount(int count) {
+        if (count < MIN_TRY_COUNT){
+            throw new IllegalArgumentException(ErrorMessage.TRY_COUNT_ERROR.getMessage());
+        }
+    }
 }
