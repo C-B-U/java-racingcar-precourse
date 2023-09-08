@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.constant.PrintElement;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +16,7 @@ public class Names {
     }
 
     public String getElements() {
-        StringJoiner stringJoiner = new StringJoiner(", ");
+        StringJoiner stringJoiner = new StringJoiner(PrintElement.SEPERATOR.getElement());
         element.forEach(name -> stringJoiner.add(name.getValue()));
         return stringJoiner.toString();
     }

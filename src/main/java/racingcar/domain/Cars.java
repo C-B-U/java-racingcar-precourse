@@ -1,5 +1,7 @@
 package racingcar.domain;
 
+import racingcar.constant.PrintElement;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -22,7 +24,7 @@ public class Cars {
         StringBuilder stringBuilder = new StringBuilder();
         cars.forEach(car ->
                 stringBuilder.append(car.getRacingResult())
-                        .append("\n")
+                        .append(PrintElement.NEW_LINE)
         );
         return stringBuilder.toString();
     }
