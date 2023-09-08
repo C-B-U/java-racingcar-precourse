@@ -11,14 +11,10 @@ public class RacingCarController {
     private final InputView inputView = new InputView();
     private final CarService carService = new CarService();
 
-    public void start() {
+    public void run() {
         carService.addCars(readNames());
         int tryCount = readTryCount();
-        outputView.printResultMessage();
-        for (int i = 0; i < tryCount; i++) {
-            outputView.printRacingResult(carService.race());
-        }
-        outputView.printWinner(carService.getWinner());
+        startRacing(tryCount);
     }
 
     private Names readNames() {
@@ -33,5 +29,13 @@ public class RacingCarController {
         int tryCount = inputView.readTryCount();
         outputView.printNewLine();
         return tryCount;
+    }
+
+    private void startRacing(int tryCount) {
+        outputView.printResultMessage();
+        for (int i = 0; i < tryCount; i++) {
+            outputView.printRacingResult(carService.race());
+        }
+        outputView.printWinner(carService.getWinner());
     }
 }
