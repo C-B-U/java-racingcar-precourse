@@ -2,11 +2,14 @@ package racingcar.domain;
 
 public class Car {
     private final Name name;
-    private int position = 0;
+    private final Position position;
 
     public Car(Name name) {
         this.name = name;
+        this.position = new Position();
     }
 
-    // 추가 기능 구현
+    public void race() {
+        position.move();
+    }
 }

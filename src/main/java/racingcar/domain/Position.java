@@ -5,10 +5,16 @@ import racingcar.constant.RandomNumber;
 
 public class Position {
 
-    private final int value = 0;
+    private int value = 0;
 
     public void move() {
+        if (canMove()) {
+            value += 1;
+        }
+    }
 
+    private boolean canMove() {
+        return pickRandomNumber() > RandomNumber.CAN_MOVE_NUMBER.getValue();
     }
 
     private int pickRandomNumber() {

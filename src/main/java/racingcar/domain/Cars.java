@@ -11,4 +11,8 @@ public class Cars {
         names.forEach(name -> cars.add(new Car(name)));
         System.out.println(cars);
     }
+
+    public void race() {
+        cars.forEach(Car::race);
+    }
 }
