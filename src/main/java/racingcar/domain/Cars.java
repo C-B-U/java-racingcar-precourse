@@ -9,10 +9,18 @@ public class Cars {
 
     public Cars(List<Name> names) {
         names.forEach(name -> cars.add(new Car(name)));
-        System.out.println(cars);
     }
 
     public void race() {
         cars.forEach(Car::race);
+    }
+
+    public String getRacingResult() {
+        StringBuilder stringBuilder = new StringBuilder();
+        cars.forEach(car ->
+                stringBuilder.append(car.getRacingResult())
+                        .append("\n")
+        );
+        return stringBuilder.toString();
     }
 }
