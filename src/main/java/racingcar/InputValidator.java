@@ -17,9 +17,16 @@ public class InputValidator {
         }
     }
 
-    public void validateTryCount(int count) {
-        if (count < MIN_TRY_COUNT){
+    public void validateTryCount(String count) {
+        validateNumeric(count);
+        if (Integer.parseInt(count) < MIN_TRY_COUNT){
             throw new IllegalArgumentException(ErrorMessage.TRY_COUNT_ERROR.getMessage());
+        }
+    }
+
+    private void validateNumeric(String count){
+        if (!count.matches("^\\d*$")){
+            throw new IllegalArgumentException(ErrorMessage.INPUT_NUMERIC_ERROR.getMessage());
         }
     }
 }

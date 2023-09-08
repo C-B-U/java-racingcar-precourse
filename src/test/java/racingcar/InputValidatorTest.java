@@ -28,8 +28,17 @@ class InputValidatorTest {
     @Test
     @DisplayName("시도할 횟수가 1회 이상이 아니라면 에러가 발생한다.")
     void inputTryCount(){
-        assertThatThrownBy(() -> inputValidator.validateTryCount(0))
+        assertThatThrownBy(() -> inputValidator.validateTryCount("0"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(ERROR);
     }
+
+    @Test
+    @DisplayName("시도할 횟수가 숫자가 아니라면 에러가 발생한다.")
+    void inputTryCountNumeric(){
+        assertThatThrownBy(() -> inputValidator.validateTryCount("a"))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining(ERROR);
+    }
+
 }
