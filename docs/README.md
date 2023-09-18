@@ -8,7 +8,8 @@
   - [x] 중복되는 이름이 있는지 검증
     - [x] 중복시 에러 문구 출력 및 재시도
 - [x] 시도 회수 요청 메시지 출력
-- [ ] 시도 회수 입력 받기
+- [x] 시도 회수 입력 받기
+  - [x] 입력값 숫자인지 검증
 - [ ] 자동차 이동
   - [ ] 차수별 이동
   - [ ] 차수별 현황 출력
@@ -22,12 +23,15 @@
 
 - InputView
   - readCars()
+  - readTryCount()
 
 - InputManager
   - readCars()
+  - readTryCount()
 
 - InputValidator
   - validateCars()
+  - validateTryCount()
 
 - Car
 
@@ -42,6 +46,8 @@
 
 - CarRepository
   - saveCars()
+
+- TryCount
 
 ## 열거형 목록
 - ErrorMessage
