@@ -54,3 +54,4 @@
 ## 열거형 목록
 - ErrorMessage
 - GameMessage
+- MoveStatus
