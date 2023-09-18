@@ -33,6 +33,15 @@
 
 - Cars
 
+- OutputView
+  - printCarRequest()
+
+- CarService
+  - saveCars()
+
+- CarRepository
+  - saveCars()
+
 ## 열거형 목록
 - ErrorMessage
 - GameMessage
