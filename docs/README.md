@@ -17,3 +17,12 @@
 ## 구현 클래스 목록
 - CarController
   - play()
+
+- InputView
+  - readCars()
+
+- InputManager
+  - readCars()
+
+- InputValidator
+  - validateCars()
