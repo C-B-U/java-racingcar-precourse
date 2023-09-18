@@ -2,6 +2,7 @@ package racingcar.io;
 
 import racingcar.domain.Car;
 import racingcar.domain.Cars;
+import racingcar.domain.TryCount;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,6 +19,10 @@ public class InputManager {
             final List<Car> cars = Arrays.stream(inputView.readCars().split(CAR_DELIMITER)).map(Car::new).collect(Collectors.toList());
             return new Cars(cars);
         });
+    }
+
+    public TryCount readTryCount() {
+        return read(() -> new TryCount(Integer.parseInt(inputView.readTryCount())));
     }
 
     private <T> T read(final Supplier<T> supplier) {
