@@ -6,8 +6,13 @@ import racingcar.constant.MoveStatus;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Cars {
+
+    private static final Integer MIN_POSITION = 0;
+    private static final String WINNER_DELIMITER = ", ";
+    private static final String NEW_LINE_DELIMITER = "\n";
     private final List<Car> cars;
 
     public Cars(final List<Car> cars) {
@@ -34,10 +39,23 @@ public class Cars {
     }
 
     public String findWinners() {
-        return null;
+        final int maxPosition = getMaxPosition();
+        return cars.stream()
+                .filter(car -> car.hasMaxPosition(maxPosition))
+                .map(Car::getName)
+                .collect(Collectors.joining(WINNER_DELIMITER));
+    }
+
+    public int getMaxPosition() {
+        return cars.stream()
+                .mapToInt(Car::getPosition)
+                .max()
+                .orElse(MIN_POSITION);
     }
 
     public String getCurrentDirection() {
-        return null;
+        return cars.stream()
+                .map(Car::getCurrentStatus)
+                .collect(Collectors.joining(NEW_LINE_DELIMITER)) + NEW_LINE_DELIMITER;
     }
 }

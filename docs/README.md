@@ -10,12 +10,12 @@
 - [x] 시도 회수 요청 메시지 출력
 - [x] 시도 회수 입력 받기
   - [x] 입력값 숫자인지 검증
-- [ ] 자동차 이동
+- [x] 자동차 이동
   - [x] 차수별 이동
-  - [ ] 차수별 현황 출력
-- [ ] 최종 우승자 선정
-  - [ ] 최종 우승자 안내 문구 출력
-    - [ ] 공동 우승자의 경우 ", " 로 구분하여 출력
+  - [x] 차수별 현황 출력
+- [x] 최종 우승자 선정
+  - [x] 최종 우승자 안내 문구 출력
+    - [x] 공동 우승자의 경우 ", " 로 구분하여 출력
 
 ## 구현 클래스 목록
 - CarController
@@ -34,22 +34,40 @@
   - validateTryCount()
 
 - Car
+  - move()
+  - getPosition()
+  - getName()
+  - hasMaxPosition()
+  - getCurrentStatus()
 
 - Cars
+  - getNumberOfCars()
+  - moveAll()
+  - findWinners()
+  - getMaxPosition()
+  - getCurrentDirection()
 
 - OutputView
   - printCarRequest()
   - printTryCountRequest()
+  - printCurrentDirection()
+  - printWinnerCars()
 
 - CarService
   - saveCars()
   - saveTryCount()
+  - findTryCount()
+  - move()
+  - findWinnerCars()
 
 - CarRepository
   - saveCars()
   - saveTryCount()
+  - findCars()
+  - findTryCount()
 
 - TryCount
+  - hasNext()
 
 - RandomMoveGenerator
   - generate

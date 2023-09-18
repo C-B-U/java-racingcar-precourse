@@ -2,7 +2,6 @@ package racingcar.controller;
 
 import racingcar.domain.Cars;
 import racingcar.domain.TryCount;
-import racingcar.domain.WinnerCars;
 import racingcar.io.InputManager;
 import racingcar.io.OutputView;
 import racingcar.service.CarService;

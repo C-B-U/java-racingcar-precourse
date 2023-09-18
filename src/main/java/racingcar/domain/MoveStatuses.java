@@ -3,6 +3,7 @@ package racingcar.domain;
 import racingcar.constant.ErrorMessage;
 import racingcar.constant.MoveStatus;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,7 +12,7 @@ public class MoveStatuses {
     private final List<MoveStatus> moveStatuses;
 
     public MoveStatuses(final List<MoveStatus> moveStatuses) {
-        this.moveStatuses = Collections.unmodifiableList(moveStatuses);
+        this.moveStatuses = new ArrayList<>(moveStatuses);
     }
 
     public MoveStatus getNext() {

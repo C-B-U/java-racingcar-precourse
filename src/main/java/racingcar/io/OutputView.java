@@ -12,10 +12,6 @@ public class OutputView {
         System.out.println(GameMessage.TRY_COUNT_REQUEST.getMessage());
     }
 
-    public void printMoveResult() {
-        System.out.println(GameMessage.MOVE_RESULT.getMessage());
-    }
-
     public void printCurrentDirection(final String currentDirection) {
         System.out.println(currentDirection);
     }

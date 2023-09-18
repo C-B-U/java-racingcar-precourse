@@ -15,7 +15,7 @@ public class InputValidator {
     }
 
     public void validateTryCount(final String input) {
-        if (input.chars().anyMatch(c -> MIN_NUMBER < c || c < MAX_NUMBER)) {
+        if (input.chars().anyMatch(c -> MIN_NUMBER > c || c > MAX_NUMBER)) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_TRY_COUNT_INPUT.getMessage());
         }
     }
