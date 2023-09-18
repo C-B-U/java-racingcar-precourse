@@ -26,3 +26,6 @@
 
 - InputValidator
   - validateCars()
+
+## 열거형 목록
+- ErrorMessage
