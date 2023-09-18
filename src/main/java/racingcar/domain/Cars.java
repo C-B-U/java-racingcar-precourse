@@ -31,7 +31,14 @@ public class Cars {
     }
 
     public void moveAll(final MoveStatuses moveStatuses) {
+        validateMoveStatusSize(moveStatuses);
         cars.forEach(car -> move(car, moveStatuses.getNext()));
+    }
+
+    private void validateMoveStatusSize(final MoveStatuses moveStatuses) {
+        if (cars.size() != moveStatuses.getSize()) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_MOVE_STATUS_SIZE.getMessage());
+        }
     }
 
     private void move(final Car car, final MoveStatus moveStatus) {
@@ -46,7 +53,7 @@ public class Cars {
                 .collect(Collectors.joining(WINNER_DELIMITER));
     }
 
-    public int getMaxPosition() {
+    private int getMaxPosition() {
         return cars.stream()
                 .mapToInt(Car::getPosition)
                 .max()

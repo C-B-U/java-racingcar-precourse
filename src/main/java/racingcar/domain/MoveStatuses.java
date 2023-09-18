@@ -4,7 +4,6 @@ import racingcar.constant.ErrorMessage;
 import racingcar.constant.MoveStatus;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MoveStatuses {
@@ -18,6 +17,10 @@ public class MoveStatuses {
     public MoveStatus getNext() {
         validateHasNext();
         return moveStatuses.remove(REMOVE_INDEX);
+    }
+
+    public int getSize() {
+        return this.moveStatuses.size();
     }
 
     private void validateHasNext() {

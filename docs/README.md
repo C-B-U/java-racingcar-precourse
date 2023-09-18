@@ -44,7 +44,6 @@
   - getNumberOfCars()
   - moveAll()
   - findWinners()
-  - getMaxPosition()
   - getCurrentDirection()
 
 - OutputView
