@@ -43,9 +43,11 @@
 
 - CarService
   - saveCars()
+  - saveTryCount()
 
 - CarRepository
   - saveCars()
+  - saveTryCount()
 
 - TryCount
 

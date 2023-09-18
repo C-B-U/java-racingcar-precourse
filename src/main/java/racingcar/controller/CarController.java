@@ -1,6 +1,7 @@
 package racingcar.controller;
 
 import racingcar.domain.Cars;
+import racingcar.domain.TryCount;
 import racingcar.io.InputManager;
 import racingcar.io.OutputView;
 import racingcar.service.CarService;
@@ -18,6 +19,8 @@ public class CarController {
 
     private void createTryCount() {
         outputView.printTryCountRequest();
+        final TryCount tryCount = inputManager.readTryCount();
+        carService.saveTryCount(tryCount);
     }
 
     private void createCars() {
