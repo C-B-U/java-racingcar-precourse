@@ -1,5 +1,6 @@
 package racingcar.controller;
 
+import racingcar.domain.Cars;
 import racingcar.io.InputManager;
 import racingcar.io.OutputView;
 import racingcar.service.CarService;
@@ -11,6 +12,8 @@ public class CarController {
     private final CarService carService = new CarService();
 
     public void play() {
-        inputManager.readCars();
+        outputView.printCarRequest();
+        final Cars cars = inputManager.readCars();
+
     }
 }
