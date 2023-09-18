@@ -11,7 +11,7 @@
 - [x] 시도 회수 입력 받기
   - [x] 입력값 숫자인지 검증
 - [ ] 자동차 이동
-  - [ ] 차수별 이동
+  - [x] 차수별 이동
   - [ ] 차수별 현황 출력
 - [ ] 최종 우승자 선정
   - [ ] 최종 우승자 안내 문구 출력
@@ -50,6 +50,9 @@
   - saveTryCount()
 
 - TryCount
+
+- RandomMoveGenerator
+  - generate
 
 ## 열거형 목록
 - ErrorMessage

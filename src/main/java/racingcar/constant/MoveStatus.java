@@ -11,4 +11,8 @@ public enum MoveStatus {
         }
         return STOP;
     }
+
+    public boolean isMove() {
+        return this == MOVE;
+    }
 }
