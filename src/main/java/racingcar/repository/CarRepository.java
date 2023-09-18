@@ -15,4 +15,12 @@ public class CarRepository {
     public void saveTryCount(final TryCount tryCount) {
         this.tryCount = tryCount;
     }
+
+    public TryCount findTryCount() {
+        return this.tryCount;
+    }
+
+    public Cars findCars() {
+        return this.cars;
+    }
 }

@@ -1,6 +1,7 @@
 package racingcar.domain;
 
 import racingcar.constant.ErrorMessage;
+import racingcar.constant.MoveStatus;
 
 import java.util.Objects;
 
@@ -31,5 +32,11 @@ public class Car {
     @Override
     public int hashCode() {
         return Objects.hash(name, position);
+    }
+
+    public void move(final MoveStatus moveStatus) {
+        if (moveStatus.isMove()) {
+            this.position++;
+        }
     }
 }
