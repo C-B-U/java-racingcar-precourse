@@ -2,6 +2,8 @@ package racingcar.domain;
 
 import racingcar.constant.ErrorMessage;
 
+import java.util.Objects;
+
 public class Car {
     private static final Integer MAX_SIZE = 5;
     private final String name;
@@ -13,8 +15,21 @@ public class Car {
     }
 
     private void validateName(final String name) {
-        if (name.length() > 5) {
+        if (name.length() > MAX_SIZE) {
             throw new IllegalArgumentException(ErrorMessage.INVALID_CAR_NAME_LENGTH.getMessage());
         }
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final Car car = (Car) o;
+        return position == car.position && Objects.equals(name, car.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, position);
     }
 }
