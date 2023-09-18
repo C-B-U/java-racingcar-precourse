@@ -7,7 +7,7 @@
     - [x] 5자 초과의 경우 에러 문구 출력 및 재시도
   - [x] 중복되는 이름이 있는지 검증
     - [x] 중복시 에러 문구 출력 및 재시도
-- [ ] 시도 회수 요청 메시지 출력
+- [x] 시도 회수 요청 메시지 출력
 - [ ] 시도 회수 입력 받기
 - [ ] 자동차 이동
   - [ ] 차수별 이동
@@ -35,6 +35,7 @@
 
 - OutputView
   - printCarRequest()
+  - printTryCountRequest()
 
 - CarService
   - saveCars()

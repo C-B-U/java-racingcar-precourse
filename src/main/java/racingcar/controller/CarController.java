@@ -12,8 +12,17 @@ public class CarController {
     private final CarService carService = new CarService();
 
     public void play() {
+        createCars();
+        createTryCount();
+    }
+
+    private void createTryCount() {
+        outputView.printTryCountRequest();
+    }
+
+    private void createCars() {
         outputView.printCarRequest();
         final Cars cars = inputManager.readCars();
-
+        carService.saveCars(cars);
     }
 }
