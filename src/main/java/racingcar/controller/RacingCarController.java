@@ -10,10 +10,10 @@ public class RacingCarController {
 
     private final OutputView outputView = new OutputView();
     private final InputView inputView = new InputView();
-    private final CarService carService = new CarService();
+    private CarService carService;
 
     public void run() {
-        carService.addCars(readNames());
+        carService = new CarService(readNames());
         TryCount tryCount = readTryCount();
         startRacing(tryCount);
     }

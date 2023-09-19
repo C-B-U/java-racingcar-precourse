@@ -5,10 +5,10 @@ import racingcar.domain.Names;
 
 public class CarService {
 
-    private Cars cars;
+    private final Cars cars;
 
-    public void addCars(Names names) {
-        cars = new Cars(names);
+    public CarService(Names names) {
+        this.cars = new Cars(names);
     }
 
     public String race() {
